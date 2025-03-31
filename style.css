@@ -1306,11 +1306,16 @@ body.dark-mode .flag-dropdown {
   transition: transform 0.3s;
 }
 
+/* Mode sombre - flèche blanche */
+body.dark-mode .lang-arrow {
+  filter: brightness(0) invert(1); /* Rend l'image blanche */
+}
+
 .language-selector.active .lang-arrow {
   transform: translateY(-50%) rotate(-90deg);
 }
 
-/* Style pour mobile */
+/* Version mobile */
 @media (max-width: 768px) {
   .language-selector {
     min-width: 82px; /* Ajusté pour les drapeaux plus grands */
@@ -1336,6 +1341,11 @@ body.dark-mode .flag-dropdown {
 
   .lang-arrow {
     left: 15px;
+  }
+
+  /* Maintient la flèche blanche en mode sombre sur mobile */
+  body.dark-mode .lang-arrow {
+    filter: brightness(0) invert(1);
   }
 }
 
