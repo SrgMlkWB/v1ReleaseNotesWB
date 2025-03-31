@@ -1669,8 +1669,9 @@ body.dark-mode .version h2 {
   }
 
   .disclaimer-content span {
+    margin: 5px;
     padding: 0 0px;
-    font-size: 11.5px;
+    font-size: 11px;
   }
 }
 
