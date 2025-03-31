@@ -148,7 +148,7 @@ body.dark-mode .disclaimer::after {
 
   .disclaimer-content span {
     padding: 0 0px;
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
@@ -565,7 +565,7 @@ main h3 {
   }
 
   .disclaimer {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
@@ -1581,7 +1581,7 @@ body.dark-mode .version h2 {
   .disclaimer {
     width: 100%;
     padding: 8px 15px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   main {
@@ -1633,7 +1633,7 @@ body.dark-mode .version h2 {
     width: calc(100% - 20px);
   }
   .disclaimer {
-    font-size: 11px;
+    font-size: 5px !important;
   }
 }
 
@@ -1681,7 +1681,7 @@ body.dark-mode .version h2 {
   .disclaimer-content span {
     margin: 5px;
     padding: 0 0px;
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
