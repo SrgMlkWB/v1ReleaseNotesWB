@@ -1346,29 +1346,6 @@ body.dark-mode .flag-dropdown {
   }
 }
 
-.close-language-selector {
-  background: none;
-  border: none;
-  color: #f18841;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
-  position: absolute;
-  right: -5px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.close-language-selector:hover {
-  color: #ff0000;
-}
-
 /* Main */
 main {
   padding: 20px;
