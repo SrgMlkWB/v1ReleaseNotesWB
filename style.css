@@ -148,7 +148,7 @@ body.dark-mode .disclaimer::after {
 
   .disclaimer-content span {
     padding: 0 0px;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -1670,7 +1670,7 @@ body.dark-mode .version h2 {
 
   .disclaimer-content span {
     padding: 0 0px;
-    font-size: 12px;
+    font-size: 11.5px;
   }
 }
 
