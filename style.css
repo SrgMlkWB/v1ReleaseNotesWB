@@ -136,8 +136,10 @@ body.dark-mode .disclaimer::after {
 
 .disclaimer-content span {
   text-align: center;
-  padding: 0 0px;
-  width: 100%; /* Assure que le span prend toute la largeur */
+  padding: 0 15px; /* Ajout de padding horizontal */
+  width: 100%;
+  line-height: 1; /* Réduction de la line-height */
+  margin: 0 10px; /* Ajout de marge horizontale */
 }
 
 /* Ajustement pour mobile */
@@ -147,8 +149,10 @@ body.dark-mode .disclaimer::after {
   }
 
   .disclaimer-content span {
-    padding: 0 0px;
+    padding: 0 15px;
     font-size: 10px;
+    line-height: 1; /* Line-height encore plus réduite sur mobile */
+    margin: 0 5px; /* Marge réduite sur mobile */
   }
 }
 
