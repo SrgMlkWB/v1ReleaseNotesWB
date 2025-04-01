@@ -576,45 +576,120 @@ main h3 {
 /* ========= NAVIGATION & SIDEBAR ========= */
 /* --- Burger Menu --- */
 .burger-menu {
-  margin-right: 380px !important;
+  position: relative;
   width: 30px;
   height: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.burger-menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--text-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .burger-menu {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    left: 0;
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .burger-menu span {
+    height: 2px;
+  }
+
+  .burger-menu span:nth-child(1) {
+    top: 0;
+  }
+
+  .burger-menu span:nth-child(2) {
+    top: 9px;
+  }
+
+  .burger-menu span:nth-child(3) {
+    top: 18px;
+  }
+
+  /* État actif du burger menu */
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+}
+
+/* Ajustements spécifiques pour les très petits écrans */
+@media (max-width: 375px) {
+  .burger-menu {
+    width: 22px;
+    height: 18px;
+    margin: 0 8px 0 0;
+  }
+
+  .burger-menu span:nth-child(2) {
+    top: 8px;
+  }
+
+  .burger-menu span:nth-child(3) {
+    top: 16px;
+  }
+
+  /* État actif du burger menu */
+  .burger-menu.active span:nth-child(1),
+  .burger-menu.active span:nth-child(3) {
+    top: 8px;
+  }
+}
+
+/* Ajustements pour la navigation */
+.nav-container {
   position: relative;
-  cursor: pointer !important;
-  z-index: 2; /* Pour s'assurer qu'il reste cliquable */
-}
-
-.burger-menu span {
-  display: block;
-  position: absolute;
-  height: 3px;
   width: 100%;
-  background: var(--text-color);
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.burger-menu span:nth-child(1) {
-  top: 0;
-}
+@media (max-width: 768px) {
+  nav {
+    padding: 8px 5px;
+  }
 
-.burger-menu span:nth-child(2) {
-  top: 10px;
-}
+  .nav-container {
+    justify-content: flex-start;
+    gap: 10px;
+  }
 
-.burger-menu span:nth-child(3) {
-  top: 20px;
-}
-
-/* État par défaut du burger menu */
-.burger-menu span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: var(--text-color);
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  #winback-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15px;
+  }
 }
 
 /* Burger menu - Version desktop */
@@ -1246,8 +1321,8 @@ header h1 {
 
 .selected-flag {
   border-radius: 5px;
-  width: 38px;
-  height: 31px;
+  width: 30px; /* Réduit de 38px à 30px */
+  height: 25px; /* Réduit de 31px à 25px */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1259,7 +1334,7 @@ header h1 {
   height: auto !important;
   display: none;
   position: absolute;
-  top: 60px;
+  top: 50px; /* Ajusté de 60px à 50px pour compenser la réduction de taille */
   left: -10px;
   background-color: #f2f2f2;
   border: 1px solid white;
@@ -1275,23 +1350,23 @@ body.dark-mode .flag-dropdown {
 
 .language-selector.active .flag-dropdown {
   display: grid;
-  grid-template-columns: repeat(3, 53px); /* 3 colonnes de largeur fixe */
-  gap: 12px; /* Gap uniforme horizontal et vertical */
-  padding: 12px; /* Padding égal au gap pour symétrie */
+  grid-template-columns: repeat(3, 42px); /* Réduit de 53px à 42px */
+  gap: 10px; /* Réduit de 12px à 10px */
+  padding: 10px; /* Réduit de 12px à 10px */
   width: fit-content;
   z-index: 5;
 }
 
 .flag-option {
-  width: 53px;
-  height: 40px;
+  width: 42px; /* Réduit de 53px à 42px */
+  height: 32px; /* Réduit de 40px à 32px */
   border-radius: 3px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   transition: transform 0.2s;
-  margin: 0; /* Supprime les marges par défaut */
+  margin: 0;
 }
 
 .flag-option:hover {
@@ -1322,25 +1397,25 @@ body.dark-mode .lang-arrow {
 /* Version mobile */
 @media (max-width: 768px) {
   .language-selector {
-    min-width: 82px; /* Ajusté pour les drapeaux plus grands */
-    height: 50px;
+    min-width: 65px; /* Réduit de 82px à 65px */
+    height: 40px; /* Réduit de 50px à 40px */
   }
 
   .selected-flag {
-    width: 33px; /* Augmenté de 10% (48px * 1.1) */
-    height: 40px; /* Augmenté de 10% (36px * 1.1) */
+    width: 26px; /* Réduit de 33px à 26px */
+    height: 32px; /* Réduit de 40px à 32px */
     margin-left: -20px;
   }
 
   .flag-option {
-    width: 53px; /* Augmenté de 10% (48px * 1.1) */
-    height: 40px; /* Augmenté de 10% (36px * 1.1) */
+    width: 42px; /* Réduit de 53px à 42px */
+    height: 32px; /* Réduit de 40px à 32px */
   }
 
   .flag-dropdown {
     left: -20px;
-    padding: 8px; /* Légèrement plus de padding pour accommoder les plus grands drapeaux */
-    gap: 8px; /* Augmenté l'espacement entre les drapeaux */
+    padding: 8px;
+    gap: 6px; /* Réduit de 8px à 6px */
   }
 
   .lang-arrow {
