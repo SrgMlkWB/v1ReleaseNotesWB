@@ -1164,10 +1164,8 @@ body.dark-mode .switch {
   justify-content: center;
   text-align: center;
   padding: 10px 25px;
-  width: calc(
-    100% - 40px
-  ); /* Réduit la largeur pour ne pas aller jusqu'aux bords */
-  margin: 10px 20px; /* Ajoute des marges sur les côtés */
+  width: calc(100% - 20%); /* Réduit la largeur pour ne pas aller jusqu'aux bords */
+  margin: 10px 10px; /* Ajoute des marges sur les côtés */
   transition: all 0.3s ease;
 }
 
@@ -2140,4 +2138,63 @@ body.dark-mode .disclaimer-content a:hover {
     display: inline-block;
     padding: 2px 0;
   }
+}
+
+/* Footer Manufacturer Info */
+.manufacturer-info {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-left: 100px; /* Pour aligner avec les release-details */
+}
+
+.manufacturer-column,
+.representative-column {
+  flex: 1;
+}
+
+.manufacturer-info p {
+  margin: 5px 0;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Responsive design pour le footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px; /* Ajustement du padding pour mobile */
+  }
+
+  .manufacturer-column,
+  .representative-column {
+    width: 100%;
+  }
+
+  .manufacturer-info {
+    padding: 20px 15px;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  .footer-content {
+    padding-left: 15px;
+  }
+}
+
+/* Support du mode sombre pour le footer */
+body.dark-mode .manufacturer-info {
+  background-color: var(--dark-bg-color);
 }
