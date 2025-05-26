@@ -1,4 +1,4 @@
-// Using Node.js to read the JSON file
+// Using Node.js to read the JSON filee
 const versionData = require('./versionData.json');
 
 // Print specific version information
@@ -19,6 +19,8 @@ console.log("BACK4 v4.2 installation compatibility:", versionData['v4.2'].instal
 console.log("BACK4 v4.2 support email:", versionData['v4.2'].support.email);
 console.log("BACK4 v4.2 support phone:", versionData['v4.2'].support.phone);
 console.log("BACK4 v4.2 support hours:", versionData['v4.2'].support.hours);
+console.log("BACK4 v4.2 note version:", versionData['v4.2'].note_version);
+console.log("BACK4 v4.2 note version:", versionData['v4.2'].note_version);
 
 // Print all versions for a specific device type
 console.log("\nAll BACK4 versions:");
