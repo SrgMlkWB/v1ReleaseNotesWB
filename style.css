@@ -707,7 +707,7 @@ main h3 {
     transform: rotate(0);
     top: 0;
   }
-  z .burger-menu.active span:nth-child(2) {
+   .burger-menu.active span:nth-child(2) {
     opacity: 1;
   }
   .burger-menu.active span:nth-child(3) {
